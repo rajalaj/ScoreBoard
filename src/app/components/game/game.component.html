@@ -1,0 +1,21 @@
+<div class="game-container">
+    <app-scoreboard *ngIf="showScore" (startAgain)="restart()" [scoreBoard]="allScores"></app-scoreboard>
+    <div class="game-over" *ngIf="stopGame">
+        Game over!
+    </div>
+    <div class="score-counter">
+        Score: {{ score }}
+    </div>
+    <div class="hostile-block" [ngStyle]="{top: block.top+'%', left: block.left+'%'}" *ngFor="let block of blocks">
+
+    </div>
+    
+    <div class="player" [ngStyle]="{left: playerPos+'%'}">
+
+    </div>
+
+    <div class="user-input" *ngIf="stopGame">
+        <input class="input-field" type="text" placeholder="Name" [(ngModel)]="userInput">
+        <button class="save-button" (click)="saveScore()">Save</button>
+    </div>
+</div>

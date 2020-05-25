@@ -1,0 +1,12 @@
+<div class="score-container">
+    <div class="score-row" style="background-color: rgba(0, 0, 0, 0) !important; box-shadow: none;">
+        <div class="col filter-header" (click)="filterByName()">Name</div>
+        <div class="col filter-header" (click)="filterByScore()">Score</div>
+    </div>
+    <div class="score-row" *ngFor="let score of scoreBoard">
+        <div class="col">{{score.name}}</div> <div class="col">{{score.score}}</div>
+    </div>
+</div>
+<div class="btn-row">
+    <button class="save-button" (click)="playAgain()">Play Again</button>
+</div>

@@ -1,0 +1,53 @@
+.score-container {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 70%;
+    top: 10%;
+    transform: translate(-50%, 0);
+    overflow: auto;
+}
+
+.score-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 2%;
+    margin-bottom: 10px;
+}
+
+.col {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn-row {
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    z-index: 100;
+}
+
+.filter-header {
+    cursor: pointer
+}
+
+.filter-header:hover {
+    opacity: 0.7;
+}
+
+.filter-header:active {
+    opacity: 0.9;
+}
